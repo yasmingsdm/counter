@@ -10,14 +10,21 @@ const Counter = ()=>{
     const dispatch = useDispatch();
 
     const handleIncrement=()=>{
-        dispatch(increment());
-
+        dispatch(increment(1));
     }
     
+    const handleIncrement5=()=>{
+        dispatch(increment(5));
+    }
+
      const handleDecrement=()=>{
-         dispatch(decrement())
+         dispatch(decrement(1))
      }
-    
+
+     const handleDecrement5=()=>{
+        dispatch(decrement(5));
+    }
+
     const handleReset=()=>{
         dispatch(reset())
     }
@@ -25,11 +32,9 @@ return(
 <div>
     <h2>Counter: {value}</h2>
     <button onClick={handleIncrement} > +1</button>
-    <button onClick={handleIncrement(5)} > +5</button>
-    <button onClick={handleIncrement(10)} > +10</button>
-    <button onClick={handleDecrement(1)} > -1</button>
-    <button onClick={handleDecrement(5)} > -5</button>
-    <button onClick={handleDecrement(10)} > -10</button> 
+    <button onClick={handleIncrement5} > +5</button>
+    <button onClick={handleDecrement} > -1</button>
+    <button onClick={handleDecrement5} > +5</button>
     <button onClick={handleReset}>Reset</button>
 </div>)
 }
