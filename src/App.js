@@ -1,8 +1,15 @@
 import React from "react";
 
+import Counter from "./Counter";
+
 const App = ()=> {
+
   return (
-    <h1>Oi</h1>
+    <div>
+      <h1>Let's count!</h1>
+      {/* <Counter/> */}
+    </div>
+  
   );
 }
 
